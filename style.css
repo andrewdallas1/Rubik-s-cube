@@ -1,0 +1,66 @@
+
+
+.container {
+  position: absolute;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition-timing-function: ease-in-out;
+  transform: rotateY(45deg) rotateX(-15deg) rotateZ(-15deg);
+  transform-style: preserve-3d;
+
+}
+
+.face {
+  position: absolute;
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #111;
+}
+
+
+.face.front { transform: translateZ(100px); }
+.face.right { transform: rotateY(90deg) translateZ(100px); }
+.face.left { transform: rotateY(-90deg) translateZ(100px); }
+.face.back {transform:  translateZ(-100px); }
+.face.top { transform: rotateX(90deg) translateZ(100px); }
+.face.down { transform: rotateX(-90deg) translateZ(100px); }
+
+.piece {
+  border: 1px solid black;
+  float: left;
+  width: 32%;
+  height: 32%;
+  margin: 0;
+  padding: 0;
+  /*box-shadow: 0 5px 5px rgba(255,255,255,0.1) inset, inset 0 -5px 5px rgba(0,0,0,0.1);*/
+}
+
+.front .piece { background-color: white; }
+.left .piece { background-color: orange; }
+.top .piece { background-color: blue; }
+.right .piece { background-color: red; }
+.back .piece { background-color: yellow; }
+.down .piece { background-color: green; }
+
+/*@keyframes left {
+  100% {
+    transform: rotate;
+  }
+}*/
+
+
